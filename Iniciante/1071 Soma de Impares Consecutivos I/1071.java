@@ -1,27 +1,23 @@
 import java.util.Scanner;
-
 public class Main {
-	
     public static void main(String[] args)  {
-    	Scanner leitor = new Scanner(System.in);
-    	int soma = 0;
-		int X = leitor.nextInt();
-		int Y = leitor.nextInt();
-
-		if (X < Y) {
-			for (int i = X + 1; i < Y; i++) {
-				if (i % 2 != 0) {
-					soma += i;
-				}
-			}
-		} else {
-			for (int i= Y + 1; i < X; i++) {
-				if (i % 2 != 0) {
-					soma += i;
-				}
-			}
+    	Scanner sc = new Scanner(System.in);
+		int XX = sc.nextInt(), YY = sc.nextInt(), S = 0, I = 0, X, Y;
+		
+		if (XX < YY){ X = XX; Y = YY;}
+		else { X = YY; Y = XX; }
+		
+		I = X;
+		if(I%2 == 0) {I++;}
+		
+		while(I < Y)
+		{
+		    if (I != X)
+		    {
+		        S = S + I;
+		    }
+		        I = I + 2;
 		}
-		System.out.println(soma);
+		System.out.println(S);
     }
-	
 }
