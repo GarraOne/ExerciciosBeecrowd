@@ -1,8 +1,8 @@
 import java.util.Scanner;
 public class Main {
 	public static void main(String[] args) {
-		Scanner leitor = new Scanner(System.in);
-		double raio = leitor.nextDouble(), area = 3.14159 * (raio * raio);
-		System.out.println(String.format("A=%.4f", area)); 
+		Scanner sc = new Scanner(System.in);
+		double R = sc.nextDouble(), A = 3.14159 * (R * R);
+		System.out.println(String.format("A=%.4f", A)); 
 	}
 }
