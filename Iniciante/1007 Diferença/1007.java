@@ -1,20 +1,9 @@
-import java.io.IOException;
 import java.util.Scanner;
-
 public class Main {
-
- 
-    public static void main(String[] args) throws IOException {
-        
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        double A = sc.nextDouble();
-        double B = sc.nextDouble();
-        double C = sc.nextDouble();
-        double D = sc.nextDouble();
-        double AB = A*B ;
-        double CD = C*D ;
-        double X = AB-CD ;
+        double A = sc.nextDouble(), B = sc.nextDouble(), C = sc.nextDouble(), D = sc.nextDouble(),
+        AB = A*B , CD = C*D, X = AB-CD;
         System.out.println(String.format("DIFERENCA = %.0f", X));
-        
     }
 }
