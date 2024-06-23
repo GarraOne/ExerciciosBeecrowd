@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class Main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         double X = sc.nextDouble(), Y = sc.nextDouble(),
         D = X*Y/12;
