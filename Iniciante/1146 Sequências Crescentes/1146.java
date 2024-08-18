@@ -1,26 +1,25 @@
-// Código ainda não finalizado
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int N = 1, I;
-        String S;
-        while(N > 0)
+        int n, i;
+        String s, e;
+        
+        while(true)
         {
-            I = 1;
-            S = "";
-            N = sc.nextInt();
+            i = 1;
+            n = sc.nextInt();
+            if(n == 0){break;}
+            s = "";
             
-            while(I <= N)
+            while(i <= n)
             {
-                S = S + I;
-                
-                I++;
-                
-                S = S + " ";
+                if(i == n) {e ="\n";}
+                else {e = " ";}
+                s = s + "" + i + e;
+                i++;
             }
-            
-            System.out.println(S + "");
+            System.out.print(s);
         }
     }
 }
