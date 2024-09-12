@@ -1,0 +1,7 @@
+X = int(input())
+A = (X//365)
+B = ((X-(A*365))//30)
+C = (X-(A*365+ B*30))
+print( A, "ano(s)")
+print( B, "mes(es)")
+print( C, "dia(s)")
