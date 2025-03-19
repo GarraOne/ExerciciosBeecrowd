@@ -1,56 +1,36 @@
-// Código ainda não finalizado
-
 import java.util.Scanner;
 public class Main {
+    
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        
-        int A, N = sc.nextInt();
-        double PA, PB, I, G1, G2;
-        
-        for (int O = 1; N>=O; O++)
-        {
-         PA = sc.nextDouble();
-         PB = sc.nextDouble();
-         G1 = sc.nextDouble();
-         G2 = sc.nextDouble();
-         I=1;
-         A = 0;
-         
-         while (I>0)
-         {
-                A++;
-                if(G1 != 0)
-                {
-                PA += (PA * G1) / 100;
+        int n = sc.nextInt(), pa, pb, a, aa, bb;
+        double g1, g2, porA, porB;
+        String s = "";
+        while(n > 0){
+            a = 0;
+            pa = sc.nextInt();
+            pb = sc.nextInt();
+            g1 = sc.nextDouble();
+            g2 = sc.nextDouble();
+            while(pa <= pb){
+                porA = pa * g1/100;
+                porB = pb * g2/100;  
+                aa = (int) porA;
+                bb = (int) porB;
+                pa += aa;
+                pb += bb; 
+                a++;
+                if(a > 100){
+                    break;
                 }
-                if(G2 != 0)
-                {
-                PB += (PB * G2) / 100;
+            }
+            n--;
+            if(a > 100){
+                    s += "Mais de 1 seculo.\n";  
+                }else{
+                    s += a + " anos.\n";  
                 }
-                
-                if (PA >=PB)
-                {
-                    if(A == 41)
-                    {System.out.println("51 anos.");}
-                    else if(A == 91)
-                    {
-                    {System.out.println("92 anos.");}
-                    }
-                    
-                    else
-                    {
-                    System.out.println(A + " anos.");
-                    }
-                    
-                    I--;
-                    
-                    
-                }
-                if (A>100){I--;System.out.println("Mais de 1 seculo.");}
-               
-         }
-            
         }
+        System.out.print(s);
     }
 }
