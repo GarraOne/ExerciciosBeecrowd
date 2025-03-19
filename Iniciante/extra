@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt(), g = sc.nextInt(), a = 0, i = 0, N;
+		String r;
+		String[] runas = new String[n];
+		int[] v = new int[n];
+		while(i < n){
+		    runas[i] = sc.next();
+		    v[i] = sc.nextInt();
+		    i++;
+		}
+		N = sc.nextInt();
+		while(N > 0){
+		    r = sc.next();
+		    i = 0;
+		    while(! r.equals(runas[i])){
+		        i++;
+		    }
+		    N--;
+		}
+		System.out.println("");
+	}
+}
